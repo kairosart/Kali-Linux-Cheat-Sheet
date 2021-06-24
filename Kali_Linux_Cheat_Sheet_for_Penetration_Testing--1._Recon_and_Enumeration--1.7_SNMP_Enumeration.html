@@ -1,0 +1,13 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>1.7 SNMP Enumeration</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>1.7 SNMP Enumeration</h1><br/><br />SNMP enumeration is the process of using SNMP to enumerate user  accounts on a target system. SNMP employs two major types of software  components for communication: the SNMP agent, which is located on the  networking device, and the SNMP management station, which communicates  with the agent.<br /><br /><table class="table"><tr><th>Command</th><th>Description</th></tr><tr><td>snmpcheck -t 192.168.1.X -c public
+snmpwalk -c public -v1 192.168.1.X 1|
+ grep hrSWRunName|cut -d* * -f
+snmpenum -t 192.168.1.X
+onesixtyone -c names -i hosts
+</td><td>SNMP enumeration</td></tr></table><br /><p align="center"><img src="images/home.svg" height="22" width="22">  <a href="index.html">Index</a></p></div></body></html>

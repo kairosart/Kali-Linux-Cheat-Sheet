@@ -1,0 +1,10 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>1.5 Mounting File Shares</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>1.5 Mounting File Shares</h1><br/><br />How to mount NFS / CIFS, Windows and Linux file shares.<br /><br /><table class="table"><tr><th>Command</th><th>Description</th></tr><tr><td>mount 192.168.1.1:/vol/share /mnt/nfs</td><td>Mount NFS share to /mnt/nfs</td></tr><tr><td>mount -t cifs -o username=user,password=pass
+,domain=blah //192.168.1.X/share-name /mnt/cifs</td><td>Mount Windows CIFS / SMB share on Linux at /mnt/cifs if you remove password it will prompt on the CLI (more secure as it wont end up in bash_history)</td></tr><tr><td>net use Z: \\win-server\share password
+/user:domain\janedoe /savecred /p:no</td><td>Mount a Windows share on Windows from the command line</td></tr><tr><td>apt-get install smb4k -y</td><td>Install smb4k on Kali, useful Linux GUI for browsing SMB shares</td></tr></table><br /><p align="center"><img src="images/home.svg" height="22" width="22">  <a href="index.html">Index</a></p></div></body></html>
